@@ -1,9 +1,9 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react'
+import { v4 as uuidv4 } from 'uuid';
 import './App.css';
 import { TodoList } from './components/TodoList.jsx'
 
 const KEY = 'todoApp.todos';
-const { v4: uuidv4 } = require('uuid');
 
 export function App() {
   const [todos, setTodos] = useState([
@@ -37,7 +37,7 @@ export function App() {
     if (task === '') return;
 
     setTodos(prevTodos => {
-      return [...prevTodos, {id: uuidv4(), task, completed: false}];
+      return [...prevTodos, {id: uuidv4.v4(), task, completed: false}];
     })
 
     todoTaskRef.current.value = null;
