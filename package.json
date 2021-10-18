@@ -1,6 +1,6 @@
 {
-  "homepage": "https://javitid.github.io/react-tutorial",
-  "name": "react-tutorial",
+  "homepage": "https://javitid.github.io/react-todos-list",
+  "name": "react-todos-list",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
