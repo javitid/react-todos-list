@@ -36,7 +36,14 @@ export function App() {
     if (task === '') return;
 
     setTodos(prevTodos => {
-      return [...prevTodos, {id: prevTodos.slice(-1) ? prevTodos.slice(-1)[0].id+1 : 0, task, completed: false}];
+      return [
+        ...prevTodos,
+        {
+          id: prevTodos.length !== 0 ? prevTodos.at(-1).id+1 : 0,
+          task,
+          completed: false
+        }
+      ];
     })
 
     todoTaskRef.current.value = null;
